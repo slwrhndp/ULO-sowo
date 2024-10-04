@@ -77,7 +77,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
         with:
-          ref: origin
+          fetch-depth: 0
+          path: origin
 
       - name: Download ROOTFS via link
         run: |
