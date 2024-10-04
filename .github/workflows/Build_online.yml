@@ -123,7 +123,7 @@ jobs:
              fi
              los=$(sudo losetup -fP --show file.img)
              sudo mount ${los}p2 rootfs
-             (cd rootfs && sudo tar cfz /home/runner/work/ULO2/ULO2/rootfs/${{ inputs.rename_rootfs }}.tar.gz *)
+             (cd rootfs && sudo tar cfz /home/runner/work/ULO-sowo/ULO-sowo/rootfs/${{ inputs.rename_rootfs }}.tar.gz *)
       - name: Building OpenWrt
         run: |
           sudo chmod +x ulo2
