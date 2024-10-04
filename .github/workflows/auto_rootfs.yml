@@ -77,7 +77,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
         with:
-          ref: p
+          ref: origin
 
       - name: Download ROOTFS via link
         run: |
