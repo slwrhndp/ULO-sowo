@@ -43,7 +43,7 @@ on:
       versi:
         description: "Pilih ULO / ULO2"
         required: true
-        default: "ulo"     
+        default: "ulo2"     
       fwinfo:
         description: 'Firmware Information'
         required: true
