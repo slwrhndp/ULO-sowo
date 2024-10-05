@@ -89,7 +89,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
         with:
-          ref: p
+          ref: main
       - name: Download file ${{ github.event.inputs.type_file }}
         run: |
            if [ $(echo ${{ github.event.inputs.img_url }} | grep "drive.") ]; then
