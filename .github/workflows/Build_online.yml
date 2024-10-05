@@ -40,6 +40,10 @@ on:
         required: true
         default: '1024'
         type: string
+      versi:
+        description: "Pilih ULO / ULO2"
+        required: true
+        default: "ulo"     
       fwinfo:
         description: 'Firmware Information'
         required: true
@@ -128,7 +132,7 @@ jobs:
         run: |
           sudo chmod +x ulo2
           sudo chmod +x ulo
-          sudo ./ulo -m ${{ inputs.devices }} -k ${{ inputs.kernel }} -s ${{ inputs.rootfs_size }}
+          sudo ./${{ inputs.versi }} -m ${{ inputs.devices }} -k ${{ inputs.kernel }} -s ${{ inputs.rootfs_size }}
           
       - name: Creating Package Artifact
         run: |
