@@ -42,7 +42,7 @@ on:
       versi:
         description: "Pilih ULO / ULO2"
         required: true
-        default: "ulo"   
+        default: "ulo2"   
       rootfs_size:
         description: "ROOTFS Size, min 640 (756, 1024, 2048, etc)"
         required: true
