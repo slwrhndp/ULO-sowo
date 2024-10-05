@@ -77,7 +77,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: dev
 
       - name: Download ROOTFS via link
         run: |
@@ -112,6 +112,7 @@ jobs:
         run: |
           mkdir -p ./artifact
           cp -rf ./out/${{ inputs.devices }}/* ./artifact/
+          cp -rf ./rootfs/*.tar.gz ./artifact/
           
       - name: Delivering Package
         uses: actions/upload-artifact@v3
