@@ -112,7 +112,7 @@ jobs:
         run: |
           mkdir -p ./artifact
           cp -rf ./out/${{ inputs.devices }}/* ./artifact/
-          cp -rf ./rootfs/*.tar.gz ./artifact/
+          # cp -rf ./rootfs/*.tar.gz ./artifact/
           
       - name: Delivering Package
         uses: actions/upload-artifact@v3
