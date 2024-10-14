@@ -43,6 +43,10 @@ on:
         description: "Pilih ULO / ULO2"
         required: true
         default: "ulo2"   
+        type: choice
+        options:
+          - ulo2
+          - ulo
       rootfs_size:
         description: "ROOTFS Size, min 640 (756, 1024, 2048, etc)"
         required: true
@@ -51,7 +55,7 @@ on:
       fwinfo:
         description: 'Firmware Information'
         required: true
-        default: 'your custom information at release pages'
+        default: '-'
         type: string
 jobs: 
   build_ipk:
@@ -94,7 +98,7 @@ jobs:
           sudo gdown ${link_gdrive} -O ./rootfs/rootfs.tar.gz
           else
             if [ $(echo ${{ inputs.rootfs_url }} | grep "mediafire.com") ]; then
-             sudo mediafire-dl ${{ inputs.rootfs_url }} && cd ..
+             sudo mediafire-dl ${{ inputs.rootfs_url }} && cd ./rootfs/rootfs.tar.gz
              else
               if [ $(echo ${{ inputs.rootfs_url }} | grep "mega.nz") ]; then
                 file_mega=$(sudo mega-get ${{ inputs.rootfs_url }} | awk -F: '{print $2}')
