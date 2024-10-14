@@ -52,6 +52,11 @@ on:
         required: true
         default: '1024'
         type: string
+      rename_rootfs:
+        description: "ganti nama rootfs"
+        required: false
+        default: ""     
+        type: string   
       fwinfo:
         description: 'Firmware Information'
         required: true
@@ -95,16 +100,16 @@ jobs:
             else
               link_gdrive=$(echo ${{ inputs.rootfs_url }} | awk -F "/" '{print $4}' | awk -F "?id=" '{print $2}'|awk -F "&export" '{print $1}')
             fi
-          sudo gdown ${link_gdrive} -O ./rootfs/rootfs.tar.gz
+          sudo gdown ${link_gdrive} -O ./rootfs/${{ inputs.rename_rootfs }}.tar.gz
           else
             if [ $(echo ${{ inputs.rootfs_url }} | grep "mediafire.com") ]; then
-             sudo mediafire-dl ${{ inputs.rootfs_url }} && cd ./rootfs/rootfs.tar.gz
+             sudo mediafire-dl ${{ inputs.rootfs_url }} && cd ./rootfs/${{ inputs.rename_rootfs }}.tar.gz
              else
               if [ $(echo ${{ inputs.rootfs_url }} | grep "mega.nz") ]; then
                 file_mega=$(sudo mega-get ${{ inputs.rootfs_url }} | awk -F: '{print $2}')
-               sudo mv ${file_mega} ./rootfs
+               sudo mv ${file_mega} ./rootfs/${{ inputs.rename_rootfs }}.tar.gz
               else
-                sudo wget -q --no-check-certificate ${{ inputs.rootfs_url }} -P ./rootfs
+                sudo wget -q --no-check-certificate ${{ inputs.rootfs_url }} -P ./rootfs/${{ inputs.rename_rootfs }}.tar.gz
               fi
             fi
           fi
@@ -133,7 +138,7 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./artifact/*
-          tag: ${{ inputs.devices }}
+          tag: ${{ inputs.devices }}/$BRANCH
           file_glob: true
           overwrite: true
           body: |
