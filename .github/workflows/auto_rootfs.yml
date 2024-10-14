@@ -52,11 +52,6 @@ on:
         required: true
         default: '1024'
         type: string
-      rename_rootfs:
-        description: "ganti nama rootfs"
-        required: false
-        default: ""     
-        type: string   
       fwinfo:
         description: 'Firmware Information'
         required: true
