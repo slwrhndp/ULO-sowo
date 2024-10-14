@@ -72,7 +72,7 @@ jobs:
           sudo -E apt-get clean
           sudo pip3 install gdown
           sudo pip3 install git+https://github.com/Juvenal-Yescas/mediafire-dl
-          # wget https://mega.nz/linux/repo/xUbuntu_20.04/amd64/megacmd-xUbuntu_20.04_amd64.deb && sudo apt install "$PWD/megacmd-xUbuntu_20.04_amd64.deb"
+          wget https://mega.nz/linux/repo/xUbuntu_20.04/amd64/megacmd-xUbuntu_20.04_amd64.deb && sudo apt install "$PWD/megacmd-xUbuntu_20.04_amd64.deb"
       - name: Mengatur tanggal
         id: date
         run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
