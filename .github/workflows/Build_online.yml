@@ -163,7 +163,7 @@ jobs:
             ULO-Builder Release from Github Workflow
             ### OpenWrt Image Information
             - Firmware Details : 
-              - Build date: ${{ env.DATETIME }}
+              - Tanggal Build: ${{ steps.date.outputs.date }}
               - Devices type : ${{ inputs.devices }}
               - Kernel version : ${{ inputs.kernel }}
               - ROOTFS File : ${{ inputs.rootfs }}
