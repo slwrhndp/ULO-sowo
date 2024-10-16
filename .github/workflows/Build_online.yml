@@ -44,10 +44,14 @@ on:
         description: "Pilih ULO / ULO2"
         required: true
         default: "ulo2"     
+        type: choice
+        options:
+          - ulo
+          - ulo2
       fwinfo:
         description: 'Firmware Information'
         required: true
-        default: 'your custom information at release pages'
+        default: '-'
         type: string
       type_file:
         description: "Select type file"
