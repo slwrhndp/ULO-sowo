@@ -101,7 +101,7 @@ jobs:
 
       - name: Mengatur tanggal
         id: date
-        run: echo "date=$(date +'%d-%m-%y-%h-%mm-%s')" >> $GITHUB_OUTPUT
+        run: echo "date=$(date +'%d-%m-%y %H:%M:%S')" >> $GITHUB_OUTPUT
    
           
       - name: Download file ${{ github.event.inputs.type_file }}
