@@ -57,6 +57,12 @@ on:
         required: true
         default: '-'
         type: string
+      rename_rootfs:
+        description: "ganti nama rootfs"
+        required: false
+        default: ""     
+        type: string 
+        
 jobs: 
   build_ipk:
     permissions:
@@ -109,7 +115,7 @@ jobs:
               fi
             fi
           fi
-        
+          mv ./rootfs/*.tar.gz ./rootfs/${{ inputs.rename_rootfs }}.tar.gz
           
       - name: Building OpenWrt
         run: |
