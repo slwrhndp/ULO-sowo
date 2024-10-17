@@ -95,7 +95,6 @@ jobs:
 
       - name: Download ROOTFS via link
         run: |
-          cd rootfs
           if [ $(echo ${{ inputs.rootfs_url }} | grep "drive.") ]; then
             if [ $(echo ${{ inputs.rootfs_url }} | awk -F "/" '{print $6}') ]; then
               link_gdrive=$(echo ${{ inputs.rootfs_url }} | awk -F "/" '{print $6}')
@@ -105,7 +104,7 @@ jobs:
           sudo gdown ${link_gdrive} -O ./rootfs/rootfs.tar.gz
           else
             if [ $(echo ${{ inputs.rootfs_url }} | grep "mediafire.com") ]; then
-             sudo mediafire-dl ${{ inputs.rootfs_url }} && cd ..
+             cd rootfs && sudo mediafire-dl ${{ inputs.rootfs_url }} && cd ..
              else
               if [ $(echo ${{ inputs.rootfs_url }} | grep "mega.nz") ]; then
                 file_mega=$(sudo mega-get ${{ inputs.rootfs_url }} | awk -F: '{print $2}')
