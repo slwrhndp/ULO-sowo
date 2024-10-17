@@ -89,6 +89,7 @@ jobs:
 
       - name: Download ROOTFS via link
         run: |
+          cd rootfs
           if [ $(echo ${{ inputs.rootfs_url }} | grep "drive.") ]; then
             if [ $(echo ${{ inputs.rootfs_url }} | awk -F "/" '{print $6}') ]; then
               link_gdrive=$(echo ${{ inputs.rootfs_url }} | awk -F "/" '{print $6}')
