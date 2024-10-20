@@ -172,7 +172,7 @@ jobs:
               - Tanggal Build: ${{ steps.date.outputs.date }}
               - Devices type : ${{ inputs.devices }}
               - Kernel version : ${{ inputs.kernel }}
-              - ROOTFS File : ${{ inputs.rootfs }}
+              - ROOTFS File : ${{ inputs.rename_rootfs }}
               - ROOTFS Size : ${{ inputs.rootfs_size }}
             - Firmware Information : 
               - ${{ inputs.fwinfo }}
