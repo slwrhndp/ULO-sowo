@@ -5,6 +5,8 @@
  ## support rootfs dan img
 https://github.com/user-attachments/assets/f9b25d81-a364-4bc9-8b84-173cfa0e099e
 
+<a target="_blank" href="https://github.com/Houjie80/ULO-sowo/releases"><img src="https://img.shields.io/github/downloads/Houjie80/ULO-sowo/total?style=for-the-badge&logo=Openwrt"></a>
+
 ## Supported Devices
 | Amlogic | Allwinner | Rockchip |
 | -------- | ------- | ------- |
