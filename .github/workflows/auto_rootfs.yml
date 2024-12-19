@@ -59,7 +59,7 @@ on:
         type: string
       rename_rootfs:
         description: "ganti nama rootfs"
-        required: false
+        required: true
         default: ""     
         type: string 
         
