@@ -153,6 +153,7 @@ jobs:
         id: extract
         run: |  
              cd build
+             unzip -d file.zip /root/core
              sudo mkdir -p boot rootfs img
              if [ ${{ github.event.inputs.type_file }} = "img.gz" ]; then
              sudo gunzip file.img.gz
