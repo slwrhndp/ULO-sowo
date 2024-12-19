@@ -165,6 +165,7 @@ jobs:
       - name: Building OpenWrt
         run: |
           sudo chmod +x ulo2
+          sudo chmod +x ulo3
           sudo chmod +x ulo
           sudo ./${{ inputs.versi }} -m ${{ inputs.devices }} -k ${{ inputs.kernel }} -s ${{ inputs.rootfs_size }}
           
