@@ -43,11 +43,12 @@ on:
       versi:
         description: "Pilih ULO / ULO2"
         required: true
-        default: "ulo2"     
+        default: "ulo3"     
         type: choice
         options:
           - ulo
           - ulo2
+          - ulo3
       fwinfo:
         description: 'Firmware Information'
         required: true
