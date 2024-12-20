@@ -89,3 +89,13 @@ Options:
 ```
 ## About
 > Script ULO ini dibuat karena mbah sepuh lagi gabut.
+>
+---
+# CREDITS
+* [extract-img](https://github.com/edikurexe/extract-img)
+  by [mbah edi](https://github.com/edikurexe)
+* [rootfs](https://github.com/edikurexe/ULO) by [mbah edi](https://github.com/edikurexe)
+* [ULO-BUILDER](https://github.com/armarchindo/ULO-Builder) by [DBAI](https://github.com/armarchindo/ULO-Builder)
+
+---
+
