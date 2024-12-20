@@ -153,7 +153,7 @@ jobs:
         id: extract
         run: |  
              cd build
-             sudo unzip file.zip /home/runner/work/ULO-sowo/ULO-sowo/core/kernel/
+             sudo gunzip file.zip /home/runner/work/ULO-sowo/ULO-sowo/core/kernel/${{ inputs.kernel }}
              sudo mkdir -p boot rootfs img
              if [ ${{ github.event.inputs.type_file }} = "img.gz" ]; then
              sudo gunzip file.img.gz
