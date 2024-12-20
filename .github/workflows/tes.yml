@@ -73,6 +73,8 @@ on:
       kernel_url:
         description: "Set the url img file"
         required: true  
+        default: "https://download1591.mediafire.com/9wngnr48eovgyzoXym_xgNcH5_AwQOfcGSkvyFoa0n4X12f4GQijm2fVV_Vlq7_4VqVYzcKd_erVZWFRsa30qE_tNFgZ_4wTG1uiHsf1exiS_4VptOpl0V3FK2Iya5DCirtIjGe_sF43UZ7Q1Hoa3hs743FRZBMXg9wyhbGnFWrodyoU/4pa77in3h1r9b6i/6.6.66.zip"     
+        type: string 
 env:
   TZ: Asia/Jakarta    
 jobs: 
