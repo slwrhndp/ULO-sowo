@@ -91,7 +91,7 @@ download_requirement_files() {
         aria2c --out=${tmp_path}/data.zip "${repos}/archive/refs/heads/main.zip"
         echo -e "Unzipping KERNEL, ROOTFS, & Driver Firmware" | $lolcat -a -d 1
         unzip -q $tmp_path/data.zip -d $tmp_path
-        unzip -d ./build/*.zip -d./core/6.6.66
+        unzip ./build/*.zip -d ./core/kernel/
         cp -rf $tmp_path/ULO-repository-main/kernel ./core/
         # cp -rf $tmp_path/ULO-repository-main/rootfs ./
         cp -rf $tmp_path/ULO-repository-main/firmware $fwdriver_path/
