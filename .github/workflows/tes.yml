@@ -149,6 +149,11 @@ jobs:
             fi
            fi
            fi
+      - name: Extract kernel
+        id: kernel
+        run: |  
+             cd build
+             unzip file.zip -d /home/runner/work/ULO-sowo/ULO-sowo/core/kernel/      
       - name: Extract firmware
         id: extract
         run: |  
