@@ -205,6 +205,6 @@ jobs:
               - Devices type : ${{ inputs.devices }}
               - Kernel version : ${{ inputs.kernel }}
               - ROOTFS File : ${{ inputs.rename_rootfs }}
-              - ROOTFS Size : ${{ inputs.rootfs_size }}
+              - ROOTFS Size : ${{ inputs.rootfs_size }} MB
             - Firmware Information : 
               - ${{ inputs.fwinfo }}
