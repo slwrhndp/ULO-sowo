@@ -100,6 +100,7 @@ Options:
 * [gdown](https://github.com/wkentaro/gdown)
 * [mediafire-dl](https://github.com/Juvenal-Yescas/mediafire-dl)
 * [megacmd](https://github.com/meganz/MEGAcmd)
+* source kernel by [mbah andi/sib0ndt](https://github.com/sib0ndt)
 
 ---
 
