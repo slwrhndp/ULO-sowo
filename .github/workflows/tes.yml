@@ -49,11 +49,20 @@ on:
           - ulo
           - ulo2
           - ulo3
+          - ulo4
       fwinfo:
         description: 'Firmware Information'
         required: true
         default: '-'
         type: string
+      type_file2:
+        description: "Select type file"
+        required: false
+        default: "tar.gz"
+        type: choice
+        options:
+          - tar.gz
+          - zip
       type_file:
         description: "Select type file"
         required: false
@@ -155,7 +164,11 @@ jobs:
         id: kernel
         run: |  
              cd build
-             unzip file.zip -d /home/runner/work/ULO-sowo/ULO-sowo/core/kernel/      
+             if [ ${{ github.event.inputs.type_file2 }} = "tar.gz" ]; then
+              tar czf file.tar.gz -C /home/runner/work/ULO-sowo/ULO-sowo/core/kernel/
+             else
+             unzip file.zip -d /home/runner/work/ULO-sowo/ULO-sowo/core/kernel/    
+             fi
       - name: Extract firmware
         id: extract
         run: |  
