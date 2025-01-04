@@ -165,7 +165,7 @@ jobs:
         run: |  
              cd build
              if [ ${{ github.event.inputs.type_file2 }} = "tar.gz" ]; then
-              tar czf file.tar.gz -C /home/runner/work/ULO-sowo/ULO-sowo/core/kernel/
+              tar -xzvf file.tar.gz -C /home/runner/work/ULO-sowo/ULO-sowo/core/kernel/
              else
              unzip file.zip -d /home/runner/work/ULO-sowo/ULO-sowo/core/kernel/    
              fi
