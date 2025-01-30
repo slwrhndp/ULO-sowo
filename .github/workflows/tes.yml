@@ -160,11 +160,6 @@ jobs:
             fi
            fi
            fi
-
-      - name: Extract kernel3
-        run: |  
-             cd core/kernel
-             sudo mkdir -p ${{ inputs.kernel }}
              
       - name: Extract kernel
         id: kernel
@@ -175,6 +170,12 @@ jobs:
              else
              unzip file.zip -d /home/runner/work/ULO-sowo/ULO-sowo/core/kernel/${{ inputs.kernel }}
              fi
+      - name: Extract kernele
+        run: |  
+             if [ ${{ github.event.inputs.type_file2 }} = "tar.gz" ]; then
+             mv core/kernel/* core/kernel/${{ inputs.kernel }}
+             #cd core/kernel/* && rm -rf dtb-rockchip-*.tar.gz && rm -rf dtb-allwinner-*.tar.gz      
+             fi        
       - name: Extract firmware
         id: extract
         run: |  
