@@ -165,9 +165,9 @@ jobs:
         run: |  
              cd build
              if [ ${{ github.event.inputs.type_file2 }} = "tar.gz" ]; then
-              tar -xzvf file.tar.gz -C /home/runner/work/ULO-sowo/ULO-sowo/core/kernel/${{ inputs.kernel }}
+              tar -xzvf file.tar.gz -C /home/runner/work/ULO-sowo/ULO-sowo/core/kernel/
              else
-             unzip file.zip -d /home/runner/work/ULO-sowo/ULO-sowo/core/kernel/${{ inputs.kernel }}
+             unzip file.zip -d /home/runner/work/ULO-sowo/ULO-sowo/core/kernel/
              fi
       - name: Extract firmware
         id: extract
