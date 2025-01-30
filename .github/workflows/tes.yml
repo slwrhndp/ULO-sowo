@@ -160,6 +160,12 @@ jobs:
             fi
            fi
            fi
+
+      - name: Extract kernel3
+        run: |  
+             cd core/kernel
+             sudo mkdir -p ${{ inputs.kernel }}
+             
       - name: Extract kernel
         id: kernel
         run: |  
