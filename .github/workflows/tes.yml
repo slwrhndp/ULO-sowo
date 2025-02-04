@@ -190,7 +190,7 @@ jobs:
           sudo chmod +x ulo3
           sudo chmod +x ulo
           sudo chmod +x ulo4
-          sudo ./${{ inputs.versi }} -m ${{ inputs.devices }} -k ${{ inputs.kernel }} -s ${{ inputs.rootfs_size }}
+          sudo ./${{ inputs.versi }} -m ${{ inputs.devices }} -r ${{ inputs.rename_rootfs }} -k ${{ inputs.kernel }} -s ${{ inputs.rootfs_size }}
           
       - name: Creating Package Artifact
         run: |
