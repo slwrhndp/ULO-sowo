@@ -1,7 +1,7 @@
 #
 # Copyright (C) 2024 nosignals
 #
-name: ULO keenel tes
+name: ULO kernel tes
 
 on:
   workflow_dispatch:
@@ -190,7 +190,7 @@ jobs:
           sudo chmod +x ulo3
           sudo chmod +x ulo
           sudo chmod +x ulo4
-          sudo ./${{ inputs.versi }} -m ${{ inputs.devices }} -r ${{ inputs.rename_rootfs }} -k ${{ inputs.kernel }} -s ${{ inputs.rootfs_size }}
+          sudo ./${{ inputs.versi }} -m ${{ inputs.devices }} -r ${{ inputs.rename_rootfs }}.tar.gz -k ${{ inputs.kernel }} -s ${{ inputs.rootfs_size }}
           
       - name: Creating Package Artifact
         run: |
