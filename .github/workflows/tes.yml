@@ -91,7 +91,7 @@ jobs:
     permissions:
       contents: write
     name: ULO kernel tes
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       
       - name: Cleanup and Installing Prerequisites
@@ -107,7 +107,6 @@ jobs:
           sudo pip3 install gdown
           sudo timedatectl set-timezone "$TZ"
           sudo pip3 install git+https://github.com/Juvenal-Yescas/mediafire-dl
-          wget https://mega.nz/linux/repo/xUbuntu_20.04/amd64/megacmd-xUbuntu_20.04_amd64.deb && sudo apt install "$PWD/megacmd-xUbuntu_20.04_amd64.deb"
                     
       - name: Checkout Repository
         uses: actions/checkout@v2
