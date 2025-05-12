@@ -91,7 +91,7 @@ jobs:
     permissions:
       contents: write
     name: ULO kernel tes
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       
       - name: Cleanup and Installing Prerequisites
